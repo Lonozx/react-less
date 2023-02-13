@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 .header{
   transition: 1s all ease-in-out;
+  background: transparent;
 }
 a{
   text-decoration: none;
@@ -14,11 +15,12 @@ li{
   display: flex;
   gap: 20px;
   justify-content: center;
+
 }
 .text{
   font-size: 40px;
   font-family: 'Amatic SC', cursive;
 }
 .text:hover{
-  font-size: 45px;
+  //font-size: 41px;
 }

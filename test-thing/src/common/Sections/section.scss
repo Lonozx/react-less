@@ -1,0 +1,11 @@
+.text{
+  &__desc{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 20px;
+  }
+}
