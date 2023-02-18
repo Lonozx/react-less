@@ -1,0 +1,11 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+}
+.listed{
+    list-style-type: none;
+    margin: 20px;
+    display: flex;
+    gap: 20px;
+}
