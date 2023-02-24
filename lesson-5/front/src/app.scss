@@ -1,0 +1,24 @@
+.container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__users{
+        display: flex;
+        gap: 20px;
+        padding: 10px;
+    }
+    &__calculate{
+        display: flex;
+        gap: 20px;
+        &-button{
+            width: 100px;
+            height: 30px;
+        }
+    }
+}
+.users{
+    max-width: 100px;
+    max-height: 30px;
+}

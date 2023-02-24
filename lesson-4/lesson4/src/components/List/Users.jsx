@@ -19,6 +19,12 @@ export const user = [
         img: 'https://sm.mashable.com/mashable_sea/photo/default/man-fakes-death-cat-q6u_2z9w.png',
     },
     {
+        id:5,
+        name: 'Mykhailo',
+        description: 'Created a calc lol',
+        img: 'https://sm.mashable.com/mashable_sea/photo/default/man-fakes-death-cat-q6u_2z9w.png',
+    },
+    {
         id:2,
         name: 'Olga',
         description: 'Created a calc lol',

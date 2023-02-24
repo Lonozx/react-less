@@ -8,8 +8,8 @@ import './main.css'
 
 export default function App() {
  
-  const saved = user.map(item=>
-    <Cart name={item.name} description={item.description} img={item.img}/>);
+  const saved = user.map(item=> item.name==='Mykhailo' && 
+   <Cart name={item.name} description={item.description} img={item.img}/>);
     
     
   return (
