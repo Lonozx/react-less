@@ -1,3 +1,6 @@
+.wrapper{
+    background: #989898;
+}
 .container{
     padding: 10px;
     display: flex;
@@ -6,6 +9,7 @@
     align-items: center;
     &__users{
         display: flex;
+        flex-direction: column;
         gap: 20px;
         padding: 10px;
     }

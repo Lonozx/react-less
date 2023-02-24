@@ -57,6 +57,7 @@ let users = [
 
   return (
     <>
+    <div className="wrapper">
     <div className="container">
         <h2>First Exercise</h2>
     <div className="container__calculate">
@@ -73,6 +74,7 @@ let users = [
         <button className='users' onClick={showUsers}>Show Users</button>
         <h3>{user}</h3>
         {/* <h3> <Users/></h3> */}
+      </div>
       </div>
       </div>
     </> 
