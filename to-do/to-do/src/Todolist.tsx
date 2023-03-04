@@ -4,7 +4,11 @@ const styles = {
     'justify-content': 'center'
 } 
 
-export default function TodoList(props: any) {
+type PropsType = {
+    title: string
+}
+
+export default function TodoList(props: PropsType) {
 
     return (
         <div className="container">
