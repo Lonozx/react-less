@@ -1,0 +1,29 @@
+{
+  "user": [
+      {
+          "id":1,
+          "name":"MYKHAILO",
+          "age": 25
+      },
+      {
+          "id":2,
+          "name":"MYKHAILO",
+          "age": 17
+      },
+      {
+          "id":3,
+          "name":"MYKHAILO",
+          "age": 22
+      },
+      {
+          "id":4,
+          "name":"MYKHAILO",
+          "age": 31
+      },
+      {
+          "id":5,
+          "name":"MYKHAILO",
+          "age": 12
+      }
+  ]
+}
