@@ -1,9 +1,16 @@
+import App from "./App"
 
 const styles = {
     display: 'flex',
     'justify-content': 'center',
-        
-} 
+    'flex-direction': 'column',
+}
+const render = {
+    display: 'flex',
+    'justify-content': 'center',
+    'align-items': 'center',
+    gap: '20px',
+}
 const inputStyles = {
     border: 'none',
     'border-bottom': '1px solid',
@@ -19,12 +26,12 @@ type TaskType = {
 
 type PropsType = {
     title: string
- /**  //or TaskType[] --> */   tasks : Array<TaskType>
-  
+ /**  //or TaskType[] --> */   tasks: Array<TaskType>
+    deleteTask: Function
 }
 
 export default function TodoList(props: PropsType) {
-
+    // debugger
     return (
         <div className="container">
             <h3>{props.title}</h3>
@@ -33,11 +40,16 @@ export default function TodoList(props: PropsType) {
                 <button>+</button>
             </div>
             <ul style={styles}>
-                <li>
-                    <input type="checkbox" checked={props.tasks[0].isDone} /><span>{props.tasks[0].title}</span>
-                    <input type="checkbox" checked={props.tasks[1].isDone} /><span>{props.tasks[1].title}</span>
-                    <input type="checkbox" checked={props.tasks[2].isDone} /><span>{props.tasks[2].title}</span>
-                </li>
+                {
+                    props.tasks.map(item => {
+                        return <li style={render}>
+                            <input type="checkbox" checked={item.isDone} />
+                            <span>{item.title}</span>
+                            <button onClick={() => { {props.deleteTask(item.id)}}}>X</button>
+                        </li>
+
+                    })
+                }
             </ul>
             <div>
                 <button>All</button>
