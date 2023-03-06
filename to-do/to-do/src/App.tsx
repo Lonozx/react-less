@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Todo from './Todolist';
+import {TaskType} from './Todolist'
 import './main.css'
+
+export type FilterValuesType = "all" | "completed" | "active"
 
 function App() {
 
@@ -41,20 +44,33 @@ function App() {
     },
   ]
 
-  let [tasks, setTasks] = useState(tasksOne);
-
+  let [tasks, setTasks] = useState<Array<TaskType>>(tasksOne);
+  let [filter, setFilter] = useState<FilterValuesType>('all');
 
   function deleteTask(id: number) {
     let newFilteredTasks = tasks.filter(item => item.id !== id)
     // console.log(newFilteredTasks); //debugg feature
-    
     setTasks(newFilteredTasks);
   }
 
+  function changeFilter(value: FilterValuesType){
+    setFilter(value);
+  }
+
+  let taskToDoList = tasks;
+
+  if(filter==='completed'){
+    taskToDoList = tasks.filter(item=>item.isDone===true)
+  }
+  if(filter==='active'){
+    taskToDoList = tasks.filter(item=>item.isDone===false)
+  }
+
+
   return (
     <div className="App">
-      <Todo deleteTask={deleteTask} title="Food to eat" tasks={tasks} />
-      <Todo deleteTask={deleteTask} title="Projects to polish" tasks={tasksTwo} />
+      <Todo deleteTask={deleteTask} title="Food to eat" tasks={taskToDoList} changeFilter={changeFilter}/>
+      {/* <Todo deleteTask={deleteTask} title="Projects to polish" tasks={tasksTwo} /> */}
       {/* <Todo title="Songs"/> */}
     </div>
   );
